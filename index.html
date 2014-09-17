@@ -1,0 +1,42 @@
+<!doctype html>
+<html ng-app = "chatApp">
+<head>
+	<title>Socket.IO chat</title>
+	<style>
+
+	* { margin: 0; padding: 0; box-sizing: border-box; }
+	div {margin-left:auto;margin-right:auto;width:800px;height:600px;}
+	body { font: 13px Helvetica, Arial; }
+	bottom {boackground:black;padding: 3px;height:64px;fload:bottom; width: 100%; }
+	form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
+	form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+	#messages { height:550px;border:solid black 1px; float:left; width:90%; list-style-type: none; margin: 0; padding: 0; }
+	#messages li { padding: 5px 10px; }
+	#users {border:solid black 1px; float:right; width:9%; list-style-type: none; margin: 0; padding: 0;}
+	#users li { padding: 5px 10px; }
+	#users li:nth-child(odd) { background: #eee; }
+	</style>
+
+	<script src="http://leyne.me:3000/socket.io/socket.io.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.js"></script>
+
+
+
+</head>
+<body>
+	<div ng-controller = "chatCtrl">
+		<ul id="messages"><li ng-repeat = "message in messages">{{message}}</li></ul>
+		<ul id="users"><li ng-repeat = "user in users">{{user}}</li></ul>
+		</ul>
+		
+			<form action="" id="msgForm" ng-submit="sendMsg()">
+				<input id="msg" ng-model="newMsg" autocomplete="off" />
+				<input type="submit">
+			
+		</div>
+	</div>
+	
+<script src="/ngchat.js"></script>
+</body>
+</html>
