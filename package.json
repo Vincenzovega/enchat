@@ -1,0 +1,19 @@
+{
+  "name": "enchat",
+  "version": "0.1.0",
+  "description": "Chat application with nodejs express on server side and angularJs on client",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vincenzovega/Lab.git"
+  },
+  "author": "Vincent LEYNE",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/Vincenzovega/Lab/issues"
+  },
+  "homepage": "https://github.com/Vincenzovega/Lab"
+}
